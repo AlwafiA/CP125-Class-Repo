@@ -1,30 +1,30 @@
+
 def calculate_bounce_height(current_height):
-    """
-    Calculate the next bounce height (80% of current).
-    """
-    # TODO: Implement this
-    pass
+    current_height *= 0.8 
+    return current_height
+
 
 
 def is_ball_stopped(height):
-    """
-    Check if the ball has stopped (height < 1).
-    """
-    # TODO: Implement this
-    pass
+    if height < 1:
+        return True
+
 
 
 def calculate_bounce_count(initial_height):
-    """
-    Count how many times the ball bounces.
-    """
-    # TODO: Implement this
-    pass
-
+    initial_height *= 0.8
+    count = 0
+    while initial_height >= 1:
+        count += 1
+        initial_height *= 0.8
 
 def calculate_total_distance(initial_height):
-    """
-    Calculate total distance traveled.
-    """
-    # TODO: Implement this
-    pass
+    total_distance = initial_height
+    bounce_height = initial_height * 0.8
+
+    while bounce_height >= 1:
+        total_distance += 2 * bounce_height
+        bounce_height *= 0.8
+
+    return total_distance
+''''''
