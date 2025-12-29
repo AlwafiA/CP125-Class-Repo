@@ -1,4 +1,16 @@
 def check_collision(x1, y1, w1, h1, x2, y2, w2, h2):
+    no_horizontal_overlap = (x1 + w1 <= x2) or (x1 >= x2 + w2)
+
+    # 2. Check for NO vertical overlap (assuming y-axis increases downwards)
+    no_vertical_overlap = (y1 + h1 <= y2) or (y1 >= y2 + h2)
+
+    # If there is NO overlap either horizontally OR vertically, they are NOT colliding.
+    if no_horizontal_overlap or no_vertical_overlap:
+        return False
+    else:
+        # If there is both horizontal AND vertical overlap, they ARE colliding.
+        return True
+
     """
     Checks if two rectangles are colliding (overlapping).
     
@@ -19,5 +31,4 @@ def check_collision(x1, y1, w1, h1, x2, y2, w2, h2):
     
     If none of these are true, they must be overlapping!
     """
-    # TODO: Implement collision detection logic
-    pass
+  
