@@ -21,18 +21,19 @@ def count_passing(scores, passing_mark):
     for i in range(len(scores)):
         if scores[i] >= passing_mark:
             count = count + 1
-            return count
+
     return count
+
 
 
 def get_class_summary(scores, passing_mark):
     average = calculate_average(scores)
-    passing = count_passing(passing_mark, scores)
+    passing = count_passing(scores, passing_mark)
     failed = len(scores) - passing
     return (average, passing, failed)
 
 
 # Test
-scores = [85, 92, 58, 74, 66, 91]
+scores = [80, 90, 100]
 summary = get_class_summary(scores, 60)
 print(f"Average: {summary[0]:.1f}, Passing: {summary[1]}, Failed: {summary[2]}")
