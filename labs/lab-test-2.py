@@ -27,4 +27,17 @@ def get_list(nu):
 
 
 call = get_list(int(input("Enter number: ")))
+
+"""
+rin - code
+def info_num(mo):
+    result = []
+    for i in range(5):
+        num = int(input)
+        result.append(num)
+    print(sorted(result))
+    print(sum(result))
+    print(max(result))
+
+info_num()"""
     
