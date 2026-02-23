@@ -21,5 +21,3 @@ def match_specialists(reqs , candidates):
                 results.append((name, candidate_rare_skills))
 
     return results
-
-
