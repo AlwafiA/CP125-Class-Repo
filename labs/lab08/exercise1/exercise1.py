@@ -13,7 +13,16 @@ def filter_passing_scores(input_file, output_file):
         int: count of passing students
     """
     # TODO: Implement this function
-    pass
+    passline = []
+    f = open("labs/lab08/exercise1/data/scores.txt", "r")
+    lines = f.readlines()
+    print(lines)
+    for line in lines:
+        if line >= 80:
+            passline.append(line)
+    return passline
+        
+
 
 
 # Test your code here

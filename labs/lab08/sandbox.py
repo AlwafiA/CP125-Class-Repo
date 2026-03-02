@@ -1,11 +1,19 @@
-# Lab 08 Sandbox - Follow along with the lab instructions
+# Create the file first
+#labs/lab08/
+# Read
+f = open("labs/lab08/data/scores.txt", "r")
+lines = f.readlines()
+f.close()
 
-# Step 1: The Problem - Data doesn't persist
+# Process
 scores = []
-scores.append(85)
-scores.append(92)
-scores.append(78)
+for line in lines:
+    score = int(line.strip())
+    scores.append(score)
 
-print("Scores:", scores)
+average = sum(scores) / len(scores)
 
-# Try running this program again - scores will be empty!
+# Write
+f = open("labs/lab08/data/report.txt", "w")
+f.write(f"Average: {average}\n")
+f.close()
