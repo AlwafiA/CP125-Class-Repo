@@ -27,3 +27,7 @@ def match_specialists(candidates_list, project_requirements):
 Candidates =  [("Ali", {"Python", "Git"}), ("Sara", {"Git", "Cloud", "COBOL"}), ("Zaki", {"Git", "Cloud"})]
 Project_Requirements =  {"Git"}
 print(match_specialists(Candidates, Project_Requirements))
+
+
+
+
