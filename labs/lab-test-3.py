@@ -31,13 +31,13 @@ def insert_new_row(bmi_csv):
     file2 = open(bmi_csv, 'a', newline='')
     file2_writer = csv.writer(file2)
     file2_writer.writerow([gender, height, weight, bmi_num])
-
+    file2.close()
   
-    file2 = open(bmi_csv, 'r', newline='') 
-    for rows in csv.reader(file2):
+    file3 = open(bmi_csv, 'r', newline='') 
+    for rows in csv.reader(file3):
         print(rows)
-
-initial_csv_calculate("bmi.csv")
-insert_new_row("bmi.csv")
+    file3.close()
+initial_csv_calculate("CP125-Class-Repo/labs/bmi.csv")
+insert_new_row("CP125-Class-Repo/labs/bmi.csv")
 
 
